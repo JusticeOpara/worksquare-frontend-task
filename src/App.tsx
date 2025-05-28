@@ -100,7 +100,7 @@ function App() {
                   <PropertyCard
                     status={property.status.map((s) => s)}
                     price={property.price}
-                    priceUnit="Per Annum"
+    
                     bedrooms={property.bedrooms}
                     bathrooms={property.bathrooms}
                     location={property.location}

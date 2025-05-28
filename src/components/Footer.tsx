@@ -10,9 +10,9 @@ const Footer = () => {
       <footer className="bg-gradient-to-br from-blue-500 to-blue-600 text-white px-8 py-12 rounded-t-3xl">
         <div className="max-w-6xl mx-auto">
           {/* Main heading */}
-          <div className="text-center mb-12 ">
-            <h1 className="text-6xl font-light mb-2 font-quicksand">DreamDwell</h1>
-            <h2 className="text-4xl font-light italic">Estates</h2>
+          <div className="text-center mb-12 w-full">
+            <h1 className="lg:text-9xl text-4xl font-normal mb-2 font-quicksand">DreamDwell</h1>
+            <h2 className="text-4xl font-light italic justify-end flex">Estates</h2>
           </div>
 
           {/* Navigation links grid */}

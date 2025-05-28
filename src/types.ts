@@ -1,3 +1,5 @@
+import type { IconType } from "react-icons";
+
 interface PropertyProps {
   id: number;
   price: string;
@@ -12,4 +14,22 @@ interface PropertyProps {
 interface SearchFilters {
   [key: string]: string;
 }
-export type { PropertyProps, SearchFilters };
+
+
+ type FilterOption = {
+  value: string;
+  label: string;
+};
+
+ type FilterVariant = "default" | "primary";
+
+ type FilterConfig = {
+  key: string;
+  label: string;
+  icon: IconType;
+  options: FilterOption[];
+  placeholder: string;
+  variant?: FilterVariant; // optional if you want to allow undefined
+};
+
+export type { PropertyProps, SearchFilters, FilterConfig };

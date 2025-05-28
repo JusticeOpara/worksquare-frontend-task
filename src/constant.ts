@@ -1,7 +1,9 @@
 import { CiDollar } from "react-icons/ci";
 import { LuChurch } from "react-icons/lu";
 import { IoLocationSharp } from "react-icons/io5";
-export const propertySearchFilters = [
+import type { FilterConfig } from "./types";
+
+export const propertySearchFilters: FilterConfig[] = [
   {
     key: "propertyType",
     label: "Property Type",
@@ -47,4 +49,4 @@ export const propertySearchFilters = [
     placeholder: "Select price range",
     variant: "primary",
   },
-]  as const;
+] 

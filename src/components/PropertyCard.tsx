@@ -8,7 +8,6 @@ interface PropertyCardProps {
   id?: string;
   status?: string[];
   price: string;
-  priceUnit?: string;
   bedrooms: number;
   bathrooms: number;
   location: string;
@@ -20,7 +19,6 @@ interface PropertyCardProps {
 const PropertyCard: React.FC<PropertyCardProps> = ({
   status,
   price,
-  priceUnit,
   bedrooms,
   bathrooms,
   location,
@@ -46,7 +44,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 
           <div className="absolute top-4 right-4 flex gap-2">
             <span className="bg-white/90  text-gray-800 px-3 py-1 rounded-full text-sm font-light">
-              {status}
+              {/* {status}   */}
+              {status?.join(' | ')}
             </span>
             
           </div>
@@ -57,7 +56,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             <div className="text-3xl lg:text-4xl text-gray-900 mb-1">
               {price}
             </div>
-            <div className="text-gray-500">{priceUnit}</div>
+            <div className="text-gray-500">Per Annum</div>
           </div>
 
           <div className="flex items-center gap-6 mb-4">
