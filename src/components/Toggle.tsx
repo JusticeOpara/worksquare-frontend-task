@@ -30,13 +30,13 @@ const PropertyToggle: React.FC<PropertyToggleProps> = ({
   };
 
   return (
-    <div className={`inline-flex bg-blue-500 rounded-full p-1 ${className}`}>
+    <div className={`inline-flex bg-blue-500 rounded-full p-4 ${className}`}>
       {options.map((option) => (
         <button
           key={option.value}
           onClick={() => handleOptionClick(option.value)}
           className={`
-            px-8 py-3 rounded-full font-medium text-lg transition-all duration-300 ease-in-out
+            px-8 py-2 rounded-full font-medium text-lg transition-all duration-300 ease-in-out
             ${activeOption === option.value
               ? 'bg-white text-blue-500 shadow-md transform scale-105'
               : 'text-white hover:text-blue-100'

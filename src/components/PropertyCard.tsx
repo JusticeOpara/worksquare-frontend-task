@@ -32,7 +32,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
     <div
       className={`rounded-2xl shadow-lg overflow-hidden max-w-2xl ${className}`}
     >
-      <div className="flex flex-col lg:flex-row justify-center p-6 space-x-6">
+      <div className="flex flex-col lg:flex-row justify-center p-6 md:space-x-6 space-y-2">
         <div className="relative lg:w-1/2">
           <img
             src={imageUrl}
@@ -52,31 +52,31 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         </div>
 
-        <div className=" flex flex-col justify-between">
-          <div className="mb-6">
+        <div className="flex flex-col justify-between">
+          <div className="mb-4">
             <div className="text-3xl lg:text-4xl text-gray-900 mb-1">
               {price}
             </div>
             <div className="text-gray-500">{priceUnit}</div>
           </div>
 
-          <div className="flex items-center gap-6 mb-6">
+          <div className="flex items-center gap-6 mb-4">
             <div className="flex items-center gap-2 text-gray-700">
               <IoIosBed size={24} />
 
-              <span className="text-sm">{bedrooms} Bedroom</span>
+              <span className="text-xs">{bedrooms} Bedroom</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
               <GiBathtub size={24}/>
-              <span className="text-sm">{bathrooms} Bathroom</span>
+              <span className="text-xs">{bathrooms} Bathroom</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
               <FaLocationDot size={24}/>
-              <span className="text-sm">{location}</span>
+              <span className="text-xs">{location}</span>
             </div>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-4">
             <h2 className="text-lg text-gray-900 leading-tight">{title}</h2>
           </div>
 

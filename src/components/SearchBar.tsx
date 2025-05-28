@@ -69,35 +69,29 @@ const FilterDropdown: React.FC<{
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={onToggle}
-        className={`flex items-center gap-3 rounded-xl px-4 py-3 min-w-[200px] transition-all duration-200 ${
+        className={`flex items-center gap-3 rounded-xl px-4 py-3 min-w-[200px] transition-all duration-200 text-gray-900 ${
           isPrimary
-            ? "bg-blue-500 text-white hover:bg-blue-600"
+            ? " text-gray-900 "
             : "hover:bg-gray-50"
         }`}
       >
         <div
-          className={`rounded-lg p-2 ${
-            isPrimary ? "bg-white bg-opacity-20" : "bg-blue-500 bg-opacity-20"
-          }`}
+          className={`rounded-lg p-2 bg-blue-500 bg-opacity-20 `}
         >
           <IconComponent
             size={20}
-            className={isPrimary ? "text-white" : "text-blue-600"}
+            className={'text-white'}
           />
         </div>
         <div className="text-left flex-1">
           <div
-            className={`font-light text-base ${
-              isPrimary ? "text-white" : "text-gray-900"
-            }`}
+            className={`font-light text-base text-gray-900`}
           >
             {filter.label}
           </div>
           
           <div
-            className={`text-sm truncate ${
-              isPrimary ? "text-blue-100" : "text-gray-500"
-            }`}
+            className={`text-sm truncate text-gray-500 `}
           >
             {selectedOption?.label || filter.placeholder || "Select..."}
           </div>
@@ -161,7 +155,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <div className="flex flex-wrap items-center gap-4 bg-white rounded-2xl border border-gray-300 p-2 w-full">
+    <div className="flex flex-wrap items-center justify-between bg-white rounded-2xl border border-gray-300 p-2 w-full">
       
       {filters.map((filter, index) => (
         <React.Fragment key={filter.key}>
@@ -180,7 +174,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
       <button
         onClick={handleSearch}
-        className="flex items-center gap-2 bg-blue-500 text-white rounded-xl px-6 py-3 font-semibold hover:bg-blue-600 transition-colors ml-auto min-w-[120px] justify-center"
+        className="flex items-center gap-2 bg-blue-500 text-white text-lg rounded-xl px-6 py-3 font-normal justify-center"
       >
         <span>{searchButtonText}</span>
         <Search size={20} />
