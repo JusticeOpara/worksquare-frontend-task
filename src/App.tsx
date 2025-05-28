@@ -6,11 +6,11 @@ import SearchBar from "./components/SearchBar";
 import PropertyToggle from "./components/Toggle";
 import { propertySearchFilters } from "./constant";
 import Footer from "./components/Footer";
-import axios from "axios";
 import LoadingSpinner from "./components/LoadingSpinner";
 import type { PropertyProps, SearchFilters } from "./types";
 
 import { defaultValues, filterByPriceRange } from "./lib/helper";
+import { PropertyData } from "./mock/propertydata";
 
 function App() {
   const [allProperties, setAllProperties] = useState<PropertyProps[]>([]);
@@ -22,10 +22,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/contents/home.json");
-
-        setAllProperties(response.data);
-        setFilteredProperties(response.data);
+        setAllProperties(PropertyData);
+        setFilteredProperties(PropertyData);
       } catch (error) {
         console.error("Error:", error);
       } finally {
