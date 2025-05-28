@@ -12,8 +12,8 @@ These instructions will help you set up a copy of the project on your local mach
 
 Before you begin, ensure you have met the following requirements:
 
-* [Node.js]
-* [npm] or [Yarn]
+* Node.js
+* npm or Yarn
 
 ### Installing
 
@@ -59,15 +59,15 @@ npm run build
 
 ## Trade-offs & Areas for Improvement
 
-No pagination or infinite scroll yet — future enhancement
-Used static data for filters; could be dynamic in real implementation
-Lacks backend; properties are fetched from a json file
+* No pagination or infinite scroll yet — future enhancement
+* Used static data for filters; could be dynamic in real implementation
+* Lacks backend; properties are fetched from a json file
 
 ## 🧠 Notes on Approach
 
-Focused on clarity, scalability, and user-centric design
-Built reusable components with props for flexibility
-Implemented basic error handling and loading states for better UX
+* Focused on clarity, scalability, and user-centric design
+* Built reusable components with props for flexibility
+* Implemented basic error handling and loading states for better UX
 
 ## 📬 Feedback
 
