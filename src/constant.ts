@@ -13,6 +13,12 @@ export const propertySearchFilters: FilterConfig[] = [
       { value: "house", label: "House" },
       { value: "flat", label: "Flat" },
       { value: "duplex", label: "Duplex" },
+      { value: "apartment", label: "Apartment" },
+      { value: "terrace", label: "Terrace" },
+      { value: "for-rent", label: "For Rent" },
+      { value: "penthouse", label: "Penthouse" },
+      { value: "shortlet", label: "Shortlet" },
+      { value: "mansion", label: "Mansion" },
     ],
     placeholder: "Select property type",
     variant: "default",
@@ -25,6 +31,9 @@ export const propertySearchFilters: FilterConfig[] = [
       { value: "all", label: "All Locations" },
       { value: "lekki", label: "Lekki, Lagos" },
       { value: "ikeja", label: "Ikeja, Lagos" },
+      { value: "banana", label: "Banana Island, Lagos" },
+      { value: "lokogoma", label: "Lokogoma, Abuja" },
+      { value: "Osapa", label: "Osapa, Lekki" },
       { value: "gwarinpa", label: "Gwarinpa, Abuja" },
       { value: "laderin", label: "Laderin" },
       { value: "lagos", label: "Lagos" },
@@ -49,4 +58,4 @@ export const propertySearchFilters: FilterConfig[] = [
     placeholder: "Select price range",
     variant: "primary",
   },
-] 
+];

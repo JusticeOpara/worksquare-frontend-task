@@ -28,7 +28,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-2xl shadow-lg overflow-hidden max-w-2xl ${className}`}
+      className={`rounded-2xl shadow hover:shadow-lg overflow-hidden max-w-2xl ${className}`}
     >
       <div className="flex flex-col lg:flex-row justify-center p-6 md:space-x-6 space-y-2">
         <div className="relative lg:w-1/2">
@@ -59,18 +59,18 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             <div className="text-gray-500">Per Annum</div>
           </div>
 
-          <div className="flex items-center gap-6 mb-4">
-            <div className="flex items-center gap-2 text-gray-700">
-              <IoIosBed size={24} />
+          <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center text-gray-700">
+              <IoIosBed size={16} />
 
               <span className="text-xs">{bedrooms} Bedroom</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              <GiBathtub size={24}/>
+            <div className="flex items-center justify-center text-gray-700">
+              <GiBathtub size={16}/>
               <span className="text-xs">{bathrooms} Bathroom</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              <FaLocationDot size={24}/>
+            <div className="flex items-center text-gray-700">
+              <FaLocationDot size={16}/>
               <span className="text-xs">{location}</span>
             </div>
           </div>

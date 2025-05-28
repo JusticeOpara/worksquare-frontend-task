@@ -1,54 +1,75 @@
-# React + TypeScript + Vite
+# 🏡 Housing Listings Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Alt text](./src/assets/homepage.png)
 
-Currently, two official plugins are available:
+A modern, responsive housing listings interface built with React, TypeScript, Tailwind CSS, and Axios. Users can browse and search through available properties.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+These instructions will help you set up a copy of the project on your local machine for development and testing purposes.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Before you begin, ensure you have met the following requirements:
+
+* [Node.js]
+* [npm] or [Yarn]
+
+### Installing
+
+Follow these steps to get your development environment up and running:
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/JusticeOpara/worksquare-frontend-task.git
+cd worksquare-frontend-task
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install the dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+1. Start the development server:
+
+```bash
+npm run dev
+```
+
+Your application should now be running on `http://localhost:5173`.
+
+## Deployment
+
+To deploy this project on a live system, follow these steps:
+
+1. Build for production:
+
+```bash
+npm run build
+```
+
+## Built With
+
+* React
+* TypeScript
+* TailwindCSS
+* Axios
+
+## Trade-offs & Areas for Improvement
+
+No pagination or infinite scroll yet — future enhancement
+Used static data for filters; could be dynamic in real implementation
+Lacks backend; properties are fetched from a json file
+
+## 🧠 Notes on Approach
+
+Focused on clarity, scalability, and user-centric design
+Built reusable components with props for flexibility
+Implemented basic error handling and loading states for better UX
+
+## 📬 Feedback
+
+If you have any feedback, please reach out to me at `justiceopara33@gmail.com`
+

@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import PropertyCard from "./components/PropertyCard";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
 import PropertyToggle from "./components/Toggle";
 import { propertySearchFilters } from "./constant";
 import Footer from "./components/Footer";
+import axios from "axios";
 import LoadingSpinner from "./components/LoadingSpinner";
 import type { PropertyProps, SearchFilters } from "./types";
-
 import { defaultValues, filterByPriceRange } from "./lib/helper";
-import { PropertyData } from "./mock/propertydata";
+import "./App.css";
 
 function App() {
   const [allProperties, setAllProperties] = useState<PropertyProps[]>([]);
@@ -22,8 +21,10 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setAllProperties(PropertyData);
-        setFilteredProperties(PropertyData);
+        const response = await axios.get("/content/listings.json");
+
+        setAllProperties(response.data);
+        setFilteredProperties(response.data);
       } catch (error) {
         console.error("Error:", error);
       } finally {
@@ -68,7 +69,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="lg:px-52 space-y-12 p-4">
+      <div className="lg:px-52 space-y-12 p-4 my-14">
         <PropertyToggle defaultValue="buy" />
 
         <SearchBar
@@ -110,6 +111,7 @@ function App() {
             )}
           </>
         )}
+        
       </div>
 
       <Footer />

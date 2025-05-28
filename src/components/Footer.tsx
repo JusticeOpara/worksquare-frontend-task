@@ -3,11 +3,11 @@ import Newsletter from "./Newsletter";
 const Footer = () => {
   return (
     <section className="h-full">
-      <div className="lg:h-[50vh] bg-gray-200 text-white items-center flex justify-center lg:px-52 px-4">
+      <div className="lg:h-[50vh] bg-blue-50 text-white items-center flex justify-center lg:px-52 px-4">
         <Newsletter />
       </div>
 
-      <footer className="bg-gradient-to-br from-blue-500 to-blue-600 text-white px-8 py-12 rounded-t-3xl">
+      <footer className="bg-gradient-to-br from-blue-500 to-blue-600 text-white px-8 py-12 rounded-t-4xl">
         <div className="max-w-6xl mx-auto">
           {/* Main heading */}
           <div className="text-center mb-12 w-full">

@@ -1,4 +1,4 @@
-export const PropertyData =[
+[
   {
     "id": 1,
     "price": "₦2,500,000",
